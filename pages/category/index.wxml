@@ -1,0 +1,16 @@
+<!--index.wxml-->
+
+
+<view class="category">
+	<view class="left">
+		<block wx:for="{{categorys}}">
+			<view class="left-item {{curNav == item.id ? 'active' : ''}}" bind:tap="onJumpTwoMenu" data-id="{{item.id}}">
+				{{item.typeName}}
+			</view>
+		</block>
+	</view>
+	<view class="right">
+		<!-- 组件化商品列表 -->
+		<van-card wx:for="{{reQuestList}}" thumb="{{item.picture}}" price="{{item.price}}" origin-price="{{item.oldprice}}" title="{{item.shop}}" desc="{{item.product}}" bind:tap="onJumpDetails" data-id="{{item.id}}"></van-card>
+	</view>
+</view>

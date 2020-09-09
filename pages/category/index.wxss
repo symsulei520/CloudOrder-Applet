@@ -1,0 +1,50 @@
+/**index.wxss**/
+.item-wrap {
+  display: flex;
+  margin: 10rpx;
+  background-color: antiquewhite;
+  border-radius: 10rpx;
+}
+
+.left-pic {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.swiper-item {
+  background: slateblue;
+  width: 100%;
+  height: 100%;
+}
+
+.category {
+  width: 100%;
+  height: 100%;
+  /* height: 400rpx; */
+  display: flex;
+}
+
+.left {
+  width: 25%;
+  height: 100vh;
+  background: rgb(182, 175, 175);
+}
+
+.right {
+  width: 75%;
+}
+
+.left-item {
+  height: 30px;
+  line-height: 30px;
+  padding: 6px 0;
+  border-bottom: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+/*左侧栏分类列表的item被选中时*/
+.left-item.active {
+  /*背景色变成白色*/
+  background: white;
+}

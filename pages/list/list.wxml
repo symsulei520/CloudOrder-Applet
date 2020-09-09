@@ -1,0 +1,26 @@
+<!--pages/list/list.wxml-->
+<view class="content-wrap">
+	<view wx:for="{{carList}}" wx:for-item="product" class="wrap">
+		<image src="{{product.picture}}" class="spimg"></image>
+		<view class="column">
+			<view class="product">{{product.product}}</view>
+			<view class="price">￥<text>{{product.price}}</text></view>
+		</view>
+		<view class="quantity">
+			<view class="op" catchtap="minusQuantity" data-id="{{product.id}}">
+				<text class="text">-</text>
+			</view>
+			<view class="number">
+				<input value="{{product.number}}" class="input"></input>
+			</view>
+			<view class="op" catchtap="addQuantity" data-id="{{product.id}}">
+				<text class="text">+</text>
+			</view>
+		</view>
+	</view>
+
+</view>
+
+	<view>
+		<van-submit-bar price="{{amounts}}" button-text="提交订单" bind:submit="onSubmit" />
+	</view>

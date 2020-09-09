@@ -1,0 +1,11 @@
+<!--components/spList.wxml-->
+<view>  
+	<view class="item-wrap">
+		<image class="left-pic" src="{{src}}"></image>
+		<view bind:tap="onJumpDetails" class="wrap">
+			<view class="shop">{{shop}}</view>
+			<view class="product">{{product}}</view>
+			<view class="price">￥{{price}}</view>
+		</view>
+	</view>
+</view>

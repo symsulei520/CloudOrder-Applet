@@ -1,0 +1,28 @@
+<!--index.wxml-->
+
+<!-- 微信小程序原生视图容器组件swiper -->
+<!-- 滑块视图容器 轮播组件 -->
+<swiper indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" class="swiper-box">
+	<block wx:for="{{MerchantsList}}" wx:key="*this">
+		<swiper-item>
+			<image class="swiper-item" src="{{item.url}}"></image>
+		</swiper-item>
+	</block>
+</swiper>
+
+
+<!-- Grid 宫格组件 -->
+<view class="spxq">猜你喜欢</view>
+<van-grid column-num="2" border="{{ false }}"  >
+  <van-grid-item use-slot wx:for="{{productDeteil}}" wx:for-item="index">
+    <image
+      style="width: 100%; height: 120px;"
+      src="{{productDeteil[index].picture}}"
+      class="grid-img"
+      bind:tap="onJumpDetails"
+      data-id="{{productDeteil[index].id}}"
+    />
+    <text class="grid-product">{{productDeteil[index].product}}</text>
+    <text class="grid-price">￥{{productDeteil[index].price}}</text>
+  </van-grid-item>
+</van-grid>

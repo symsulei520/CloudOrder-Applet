@@ -1,0 +1,26 @@
+/* pages/my/my.wxss */
+.box{
+  width: 100%;
+  height: 100vh;
+  background: rgb(119, 117, 117);
+}
+.user{
+  padding: 30rpx 0;
+  text-align: center;
+  background: white;
+}
+.btn{
+  background: gray;
+}
+.userimg{
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+}
+.van-cell-group{
+  text-align: left;
+  margin-top: 20rpx;
+  background: white;
+  height: 100vh;
+}

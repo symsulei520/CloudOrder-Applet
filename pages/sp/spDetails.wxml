@@ -1,0 +1,62 @@
+<!--pages/sp/spDetails.wxml-->
+<view class="bj">
+	<view>
+		<image src="{{product.picture}}" class="spimg"></image>
+	</view>
+
+	<view class="spbox">
+		<view class="spbox1">
+			<view class="spname">{{product.shop}}</view>
+			<view class="spxq">{{product.product}}</view>
+			<view class="spgw">
+				<view>
+					<view class="spjg">现价:￥
+						<text class="spxj">{{product.price}}</text>
+					</view>
+					<text class="spyj">￥{{product.oldprice}}</text>
+				</view>
+				<van-button bind:tap="onCartHander" class="btn" type="primary" size="small" round custom-style="width:200rpx" icon="plus">加入购物车</van-button>
+			</view>
+		</view>
+	</view>
+
+	<view class="spjs1">商品详情
+		<view class="spjs2">{{product.detail}}</view>
+	</view>
+
+	<!-- 评论 -->
+	<view class="sppl">
+		<!-- 商品评论 -->
+		<view class="plTitle">商品评论</view>
+		<view wx:for="{{comment}}" >
+			<view class="userInfo">
+				<image src="{{item.header}}" class="pltx"></image>
+				<view class="userTime">
+					<view>{{item.user}}</view>
+					<view>{{item.time}}</view>
+				</view>
+			</view>
+			<!-- 评论详情 -->
+			<view class="plDetails">
+				<view class="plContent">
+					<view>{{item.content}}</view>
+				</view>
+				<!-- 店铺环境 -->
+				<view>店铺环境：</view>
+				<view class="shopPic">
+					<image wx:for="{{item.shopPic}}" wx:for-item="pic" wx:key="index" style="width:200rpx; height:200rpx" src="{{pic}}"></image>
+				</view>
+			</view>
+		</view>
+
+		<!-- 评论内容 -->
+		<view>评论内容：</view>
+		<input class="comment-input" placeholder="请输入评论" bind:input="onInputHandler" value="{{inputStr}}"></input>
+		<view>店铺环境</view>
+		<view class="shopPic">
+			<image wx:for="{{shopPics}}" wx:for-item="pic" wx:key="index" style="width:200rpx; height:200rpx" src="{{pic}}"></image>
+		</view>
+		<van-button bind:tap="onUploadFileHandler">上传商家图片</van-button>
+		<van-button bind:tap="onCommentHandler" class="btn" type="primary" size="small" round custom-style="width:200rpx">提交评论</van-button>
+	</view>
+</view>

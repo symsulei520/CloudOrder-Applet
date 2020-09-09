@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "splist":"../../components/spList/spList",
+    "van-card": "../../miniprogram_npm/@vant/weapp/card/index",
+    "van-sidebar": "../../miniprogram_npm/@vant/weapp/sidebar/index",
+    "van-sidebar-item": "../../miniprogram_npm/@vant/weapp/sidebar-item/index",
+    "van-loading": "../../miniprogram_npm/@vant/weapp/loading/index"
+  },
+  "enablePullDownRefresh":true
+}

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/my/my",
+    "pages/sp/spDetails",
+    "pages/logs/logs",
+    "pages/category/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "苏儿餐厅",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#F0F8FF",
+    "selectedColor": "#956709",
+    "backgroundColor": "#000000",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/ba.png",
+        "selectedIconPath": "images/ba_active.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "菜单",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/ba_active.png"
+      }, {
+        "pagePath": "pages/list/list",
+        "text": "购物车",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart_active.png"
+      }, {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile_active.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

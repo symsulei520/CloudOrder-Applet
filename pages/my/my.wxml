@@ -1,0 +1,24 @@
+<!--pages/my/my.wxml-->
+<view class="box">
+	<view>
+		<!-- wx:if="{{canIUse}} 判断小程序的API，回调，参数，组件等是否在当前版本可用 -->
+		<!-- wx:if="{{!userInfo && canIUse}}" 判断userInfo的数据（用户对象）不存在并且当前版本可用时button才显示 -->
+		<button class="btn" wx:if="{{!userInfo && canIUse}}" open-type="getUserInfo" bind:getuserinfo="bindGetUserInfo">获取用户信息</button>
+
+		<view class="zf" wx:else>
+			<view class="user">
+				<image src="{{userInfo.avatarUrl}}" class="userimg"></image>
+				<view>{{userInfo.nickName}}</view>
+			</view>
+			
+			<van-cell-group>
+				<van-cell title="支付" icon="location-o" is-link />
+				<van-cell title="收藏" icon="location-o" is-link />
+				<van-cell title="相册" icon="location-o" is-link />
+				<van-cell title="卡包" icon="location-o" is-link />
+				<van-cell title="表情" icon="location-o" is-link />
+				<van-cell title="设置" icon="location-o" is-link />
+			</van-cell-group>
+		</view>
+	</view>
+</view>
